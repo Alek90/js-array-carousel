@@ -8,7 +8,6 @@
 // creazione/copiatura delle variabili array dal materiale
 
 
-
 const items = [
     'img/01.jpg',
     'img/02.jpg',
@@ -23,7 +22,7 @@ const title = [
     'Gran Bretagna',
     'Germania',
     'Paradise'
-]
+];
 
 const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
@@ -31,6 +30,19 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-]
+];
+
+
+// Variabili
+const btn_up = document.getElementById("up");
+const btn_down = document.getElementById("down");
+
+
+
+// Creare l'azione
+
+btn_up.addEventListener ("click", function() {
+    console.log("up premuto");
+})
 
 
