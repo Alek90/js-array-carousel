@@ -43,6 +43,12 @@ const btn_down = document.getElementById("down");
 
 btn_up.addEventListener ("click", function() {
     console.log("up premuto");
+
+    /* qui la classe img_unselected, per il valore successivo, deve essere sostituita dalla classe img_selected;
+    
+    in contemporanea la relativa classe img_(country) deve essere applicata a #visited;
+    
+    in contemporanea i rispettivi valori di title e text devono essere mandati a schermo su #country e su #caption;*/
 })
 
 
