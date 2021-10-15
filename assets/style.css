@@ -8,6 +8,8 @@ body{
     background-color: black;
 }
 
+
+
 section{
     color: white;
     display: flex;
@@ -19,5 +21,6 @@ section{
 }
 
 .text{
+    margin: 30px 25px;
     text-align: end;
 }
