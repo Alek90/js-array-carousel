@@ -36,8 +36,17 @@ section{
     height: 300px;
 }
 
-.img{
+.img_unselected{
     width: 100%;
     height: calc(100% / 5);
     background-color: darkblue;
+    opacity: 50%;
+}
+
+
+.img_selected{
+    width: 100%;
+    height: calc(100% / 5);
+    opacity: none;
+    border: 2px solid white;
 }

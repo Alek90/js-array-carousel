@@ -7,7 +7,6 @@
 
 // creazione/copiatura delle variabili array dal materiale
 
-const img = document.getElementById("countri")
 
 
 const items = [
@@ -34,6 +33,4 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
-console.log(items, title, text);
-console.log(img);
 
