@@ -50,3 +50,39 @@ section{
     opacity: none;
     border: 2px solid white;
 }
+
+.img_Svezia{
+    background-image: url(../img/01.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_Svizzera{
+    background-image: url(../img/02.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_GB{
+    background-image: url(../img/03.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_Germania{
+    background-image: url(../img/04.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img_Paradise{
+    background-image: url(../img/05.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
