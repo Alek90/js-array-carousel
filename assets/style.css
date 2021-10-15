@@ -9,18 +9,35 @@ body{
 }
 
 
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 section{
     color: white;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 500px;
-    width: 800px;
+    height: 300px;
+    width: 700px;
     background-color: darkred;
 }
 
 .text{
     margin: 30px 25px;
     text-align: end;
+}
+
+.carosello{
+    width: 135px;
+    height: 300px;
+}
+
+.img{
+    width: 100%;
+    height: calc(100% / 5);
+    background-color: darkblue;
 }

@@ -7,6 +7,9 @@
 
 // creazione/copiatura delle variabili array dal materiale
 
+const img = document.getElementById("countri")
+
+
 const items = [
     'img/01.jpg',
     'img/02.jpg',
@@ -32,5 +35,5 @@ const text = [
 ]
 
 console.log(items, title, text);
-
+console.log(img);
 
