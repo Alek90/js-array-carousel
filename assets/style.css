@@ -10,4 +10,14 @@ body{
 
 section{
     color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 500px;
+    width: 800px;
+    background-color: darkred;
+}
+
+.text{
+    text-align: end;
 }
