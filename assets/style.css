@@ -9,35 +9,71 @@ body{
 }
 
 
-.container{
+
+/* utili */
+
+.img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* contenuto */
+
+main{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section{
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+/* jumbo */
+
+.container{
     height: 300px;
     width: 700px;
     background-color: darkred;
+    position: relative;
 }
+
+section{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+}
+
+.jumbotron{
+    display: none;
+}
+
 
 .text{
     margin: 30px 25px;
     text-align: end;
 }
 
-.carosello{
+
+/* colonna_immagini */
+
+.aside{
     width: 135px;
     height: 300px;
     position: relative;
 }
 
-.img_unselected{
+.carosello{
+    width: 100%;
+    height: 100%;
+}
+
+.unselected{
     width: 100%;
     height: calc(100% / 5);
     background-color: darkblue;
@@ -45,54 +81,16 @@ section{
 }
 
 
-.img_selected{
-    width: 100%;
-    height: calc(100% / 5);
-    opacity: none;
-    border: 2px solid white;
-}
-
-.img_Svezia{
-    background-image: url(../img/01.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.img_Svizzera{
-    background-image: url(../img/02.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.img_GB{
-    background-image: url(../img/03.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.img_Germania{
-    background-image: url(../img/04.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.img_Paradise{
-    background-image: url(../img/05.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+ 
+/* bottoni */
 
 button{
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
     text-align: center;
     border-radius: 50%;
     border: none;
+    z-index: 10000;
 }
 
 i{
@@ -100,17 +98,29 @@ i{
     vertical-align: middle;
 }
 
-#up{
+.up{
     position: absolute;
     top: 5px;
     left: 50%;
     transform: translate(-50%);
 }
 
-#down{
+.down{
     position: absolute;
     bottom: 5px;
     left: 50%;
     transform: translate(-50%);
 }
 
+
+
+/* attivazioni js */
+
+.jumbotron.selected{
+    display: flex;
+}
+
+.unselected.selected{
+    opacity: 100%;
+    border: 2px solid white;
+}

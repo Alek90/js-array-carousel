@@ -1,12 +1,7 @@
-/* Creare un carosello che all'azione "click" su specifici pulsanti esegua:
-    -cambiamento di "evidenza/selezione tra le immagini del carosello;
-
-    -riproduzione dell'immagine selezionata nella sezione #visited, con relativi testi; 
-*/
+/* Creare un carosello che al click sui bottoni, cambi l'immagine ed i testi nella zona principale, e contemporaneamente schiarisca la relatica immagine nella colonna, contornandola di un bordo bianco. */
 
 
-// creazione/copiatura delle variabili array dal materiale
-
+// Array preimpostate per l'esecuzione dell'esercizio.
 
 const items = [
     'img/01.jpg',
@@ -32,23 +27,88 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ];
 
+// Variabili costanti 
 
-// Variabili
-const btn_up = document.getElementById("up");
-const btn_down = document.getElementById("down");
+const jumbo_cnt = document.querySelector(".container");
+const img_cnt = document.querySelector(".carosello");
+
+const up = document.querySelector(".up");
+const down = document.querySelector(".down");
+const limit = items.length;
+
+// Variabili inizializzate ma relative
+
+let jumbo = "";
+let img = "";
+let x = 0;
 
 
+// Utilizziamo un ciclo per "distribuire" le immagini ed i testi con gli array. Creiamo alcuni elementi html da qui.
 
-// Creare l'azione
+for (let index = 0; index < items.length; index++) {
+    jumbo += `
+        <section class="jumbotron img" style="background-image: url(${(items[index])})">
+            <div class="text">
+                <h1 class="country">${title[index]}</h1>
+                <p class="caption">${text[index]}</p>
+            </div>
+        </section>`;
 
-btn_up.addEventListener ("click", function() {
-    console.log("up premuto");
+    // console.log(jumbo);
+    img += `
+    <div class="unselected img" style="background-image: url(${(items[index])})"></div>`
+}
 
-    /* qui la classe img_unselected, per il valore successivo, deve essere sostituita dalla classe img_selected;
+
+// Mandiamo a schermo
+
+jumbo_cnt.innerHTML = jumbo;
+document.getElementsByClassName("jumbotron")[x].classList.add("selected");
+
+img_cnt.innerHTML = img;
+document.getElementsByClassName("unselected")[x].classList.add("selected");
+
+
+// Creiamo le funzioni che ci permettono al click del bottone di:
+
+up.addEventListener("click", function() {
+
+    // - togliere la classe attiva (selected) dalla posizione che occupa;
+    document.getElementsByClassName("jumbotron")[x].classList.remove("selected");
+    document.getElementsByClassName("unselected")[x].classList.remove("selected");
+
+    // - slittare la variabile posizione (x) secondo una data regola per ripartire da capo quando finisce il giro (decrescente);
+    if (x > 0) {
+        x --;
+    }else {
+        x = limit - 1;
+    }
     
-    in contemporanea la relativa classe img_(country) deve essere applicata a #visited;
+    // - assegnare la classe attiva (selected) nella nuova posizione indicata;
+    console.log(x);
+    document.getElementsByClassName("jumbotron")[x].classList.add("selected");
+    document.getElementsByClassName("unselected")[x].classList.add("selected");
     
-    in contemporanea i rispettivi valori di title e text devono essere mandati a schermo su #country e su #caption;*/
-})
+}); 
 
 
+// Funzione con giro crescente:
+
+down.addEventListener("click", function() {
+
+    document.getElementsByClassName("jumbotron")[x].classList.remove("selected");
+    document.getElementsByClassName("unselected")[x].classList.remove("selected");
+    
+    
+    if (x < limit - 1) {
+        x ++;
+    }else {
+        x = 0;
+    }
+    
+    console.log(x);
+    document.getElementsByClassName("jumbotron")[x].classList.add("selected");
+    document.getElementsByClassName("unselected")[x].classList.add("selected");
+
+    
+}); 
